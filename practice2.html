@@ -1,0 +1,68 @@
+<html>
+	<head>
+		Practice Two: CSS Font Control<br><br>
+
+	</head>
+
+	<body>
+		<style>
+        #paragraph{
+                border-style:solid;
+                border-width: 5px
+                }
+</style>
+
+		<div id = "paragraph" style = "border-color: rgb(255,0,0); border-width:5px; background-color: rgb(0,255,0;">Paragraph to be altered
+        </div>
+
+		
+		
+		<label for="rBorder">Border R(0-255):</label>
+		<input type="text" id="rBorder" name = "rBorder"><br>
+ 		 <label for="gBorder">Border G(0-255):</label>
+		 <input type="text" id="gBorder" name="gBorder"><br>
+		 <label for="bBorder">Border B(0-255):</label>
+		 <input type="text" id="bBorder" name = "bBorder"><br>
+ 	 <label for="bWidth">Border Width:</label>
+ 	 <input type="text" id="bWidth" name="bWidth"><br>
+ 	 <label for="rBackground">Background R(0-255):</label>
+	 <input type="text" id="rBackground" value><br>
+
+
+ 	 <label for="gBackground">Background G(0-255):</label>
+	 <input type="text" id="gBackground" value><br>
+  	 <label for="bBackground">Background b(0-255):</label>
+	 <input type="text" id="bBackground" value><br>
+
+	 <button onclick="alert_paragraph_color()">Change the Colors!</button>
+
+
+
+
+
+	</body>
+
+</html>
+
+<script type="text/javascript">
+
+
+function alert_paragraph_color() {
+    
+		//alert("function");
+		var border_R = document.getElementById("rBorder").value;
+    var border_G = document.getElementById("gBorder").value;
+    var border_B = document.getElementById("bBorder").value;
+    var border_width = document.getElementById("bWidth").value;
+    var bg_R = document.getElementById("rBackground").value;
+    var bg_G = document.getElementById("gBackground").value;
+    var bg_B = document.getElementById("bBackground").value;
+
+    var tag = document.getElementById("paragraph");
+    tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+    tag.style.borderWidth = border_width
+    tag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+}
+
+
+</script>

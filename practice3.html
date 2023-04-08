@@ -1,0 +1,34 @@
+<html>
+	<head>
+		EECS 348 Lab Seven Practice Three<br>
+	</head>
+	<body>
+		First Password input:
+		<input type = "text" id = "firstPass" value><br>
+		Second Password input:
+		<input type = "text" id= "secondPass" value><br>
+		<button onclick="validate()">Validate the passwords</button><br>
+	</body>
+	
+
+</html>
+			 <script type="text/javascript">
+                function validate() {
+
+                               
+                                        var first = document.getElementById("firstPass").value;
+    var sec = document.getElementById("secondPass").value;
+
+
+    if (first.length < 8) {
+        alert("The length of the first password is less than 8 letters!")
+    } else if (sec.length < 8) {
+        alert("The length of the second password is less than 8 letters!")
+    } else if (first != sec) {
+        alert("Two passwords don't match!")
+    } else {
+        alert("Everything is good!")
+    }
+}
+        </script>
+
